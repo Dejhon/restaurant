@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title%></title>
+
+    <link rel="stylesheet" href="/css/checkout.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <!-- <div class="user"><%= user %></div> -->
+            <div class="user">Cr&egrave;me Del La Cr&egrave;me</div>
+            <li><a onclick="history.back()">Menu</a></li>
+        </ul>
+    </nav>
+    <!-- <h1><%= user%>'s Cart</h1> -->
+        <table border="0" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if(data.length){
+   
+                    for(var i = 0; i< data.length; i++) {%> 
+                <form action="/order/orders" method="post">
+                  <tr>
+                      <td> <input type="hidden" name="description" value="<%= data[i].description %>"><%= data[i].description %></td>
+                      <td> <input type="hidden" name="price" value="<%= data[i].price %>"><%= data[i].price %></td>
+                      <td id="quant"> <input type="number" name="quant" value="1"></td>
+                      <td id="delete">
+                          <button><a href="/checkout/delete/<%= data[i].id %>">Delete</a></button>
+                      </td>
+                  </tr>
+                  <% }
+             
+                   }else{ %>
+                        <tr>
+                            <td colspan="3">No Orders Found</td>
+                        </tr>
+                   <% } %>   
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td id="btn" colspan="4"><input type="submit" value="CHECKOUT"></td>
+                </tr>
+            </form> 
+            </tfoot>
+        </table>
+</body>
+</html>

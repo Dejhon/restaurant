@@ -1,0 +1,45 @@
+
+body{
+     background-image: url('/video/pexels-snapwire-6971.jpg');
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+
+form{
+    margin: auto;
+    width: 300px;
+    text-align: center;
+    border: 1px solid burlywood;
+    padding-bottom: 20px;
+    background-color: burlywood;
+    border-radius: 10px;
+    margin-top: 150px;
+    opacity: 90%;
+}
+
+.confirm label{
+    float: left;
+    margin-left:65px;
+    font-size: 18px;
+}
+
+.confirm input{
+    height: 25px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 170px;
+}
+
+.submitbtn input{
+    margin-top: 20px;
+    height: 25px;
+    border: 1px solid sienna;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+    font-size: 18px;
+    background-color: sienna;
+    border: 1px;
+    color: white;
+    cursor: pointer;
+}

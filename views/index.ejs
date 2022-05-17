@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cr&egrave;me De La Cr&egrave;me</title>
+    <link rel="stylesheet" href="css/index.css">
+
+    <script type="text/javascript">
+          function togglemenu(){
+              document.getElementById('sidebar').classList.toggle('active');
+          }
+    </script>
+</head>
+<body>
+
+  <video autoplay="autoplay" muted loop id="myVideo">
+    <source src="/video/video.mp4" type="video/mp4">
+  </video>
+
+  <div class="content">
+        <div id="sidebar" onclick="togglemenu()">
+            <div class="toggle-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="/adduser/user">Register </a></li>
+                <li><a href="/user/login">Login </a></li>
+                <li><a href="/user/adminlogin">Admin</a></li>
+                <!-- <li><a href="#">Menu</a></li> -->
+            </ul>
+        </div>
+
+        <div class="Motto">
+            <h1>A DELIGHT<br> IN <br>EVERY BITE</h1>
+        </div>
+    </div>
+    
+</body>
+</html>

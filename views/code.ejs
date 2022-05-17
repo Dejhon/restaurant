@@ -1,0 +1,179 @@
+<div class="lunch">
+    <div class="menu">
+        <% if(data.length){ %>
+            <% for(var i = 0; i < data.length; i++) { %>
+               <% if(data[i].category_id == 2){ %>
+                 <form action="/cart/addToCart" method="post">
+                      <input type="hidden" value="<%= user %>" name="username">
+
+                    <div class="card">
+                    <div class="order">
+                        <div class="id">
+                            <input type="hidden" value="<%= data[i].category_id %>" name="id">
+                        </div>
+                        <div class="lunch_des">
+                            <input type="hidden" value="<%= data[i].description %>" name="description">
+                            <%= data[i].description %>
+                        </div>
+                        <div class="orderbtn">
+                            <div class="price">
+                            <input type="hidden" value="<%= data[i].price %>" name="price">
+                                <h3>$<%= data[i].price %></h3>
+                            </div>
+                            <input type="submit" value="ORDER">
+                        </div>
+                    </div>
+                    </div> 
+                </form>
+               <% } %>
+            <% } %>      
+        <% }else{ %>
+            <div>
+                <h3>No Data Found</h3>
+            </div>
+         <% } %>   
+    </div>
+    <div class="pic">
+        <img src="/video/lunch.jpg">
+        <div class="overlay"></div>
+        <div class="text">Lunch</div>
+    </div>
+</div>
+<div class="dinner">
+    <div class="pic">
+        <img src="/video/dinner.jpg">
+        <div class="overlay"></div>
+        <div class="text">Dinner</div>
+    </div>
+    <div class="menu">
+        <% if(data.length){ %>
+            <% for(var i = 0; i < data.length; i++) { %>
+               <% if(data[i].category_id == 3){ %>
+               <form action="/cart/addToCart" method="post">
+                <input type="hidden" value="<%= user %>" name="username">
+
+                    <div class="card">
+                    <div class="order">
+                        <div class="id">
+                            <input type="hidden" value="<%= data[i].category_id %>" name="id">
+                        </div>
+                        <div class="breakfast_des">
+                            <input type="hidden" value="<%= data[i].description %>" name="description">
+                            <%= data[i].description %>
+                        </div>
+                        <div class="orderbtn">
+                            <div class="price">
+                            <input type="hidden" value="<%= data[i].price %>" name="price">
+                                <h3>$<%= data[i].price %></h3>
+                            </div>
+                            <input type="submit" value="ORDER">
+
+                            <!-- <Button><a>ORDER</a></Button> -->
+                        </div>
+                    </div>
+                    </div> 
+               </form>
+               <% } %>
+            <% } %>      
+        <% }else{ %>
+            <div>
+                <h3>No Data Found</h3>
+            </div>
+         <% } %>   
+    </div>
+</div>
+
+</section>
+<section class="drinks">
+ <div class="natural_j">
+     <div class="fruit_j">
+         <img src="/video/natural_juice.jpg">
+         <div class="j_overlay"></div>      
+         <div class="j_text">Natural Juices</div>                 
+     </div>
+     <div class="menu">
+        <% if(data.length){ %>
+            <% for(var i = 0; i < data.length; i++) { %>
+               <% if(data[i].category_id == 4){ %>
+              <form action="/cart/addToCart" method="post">
+                <input type="hidden" value="<%= user %>" name="username">
+
+                    <div class="card">
+                    <div class="order">
+                        <div class="id">
+                            <input type="hidden" value="<%= data[i].category_id %>" name="id">
+                        </div>
+                        <div class="breakfast_des">
+                            <input type="hidden" value="<%= data[i].description %>" name="description">
+
+                            <%= data[i].description %>
+                        </div>
+                        <div class="orderbtn">
+                            <div class="price">
+                            <input type="hidden" value="<%= data[i].price %>" name="price">
+
+                                <h3>$<%= data[i].price %></h3>
+                            </div>
+                            <input type="submit" value="ORDER">
+
+                            <!-- <Button><a>ORDER</a></Button> -->
+                        </div>
+                    </div>
+                    </div> 
+               </form>
+               <% } %>
+            <% } %>      
+        <% }else{ %>
+            <div>
+                <h3>No Data Found</h3>
+            </div>
+         <% } %>   
+     </div>
+ </div>           
+ <div class="soda">
+    <div class="fruit_j">
+        <img src="/video/soda.webp">
+        <div class="j_overlay"></div>      
+        <div class="j_text">Other Drinks</div>                 
+    </div>
+    <div class="menu">
+       <% if(data.length){ %>
+           <% for(var i = 0; i < data.length; i++) { %>
+              <% if((data[i].category_id == 5) || (data[i].category_id == 6)){ %>
+                <form action="/cart/addToCart" method="post">
+                    <input type="hidden" value="<%= user %>" name="username">
+
+                   <div class="card">
+                   <div class="order">
+                    <div class="id">
+                        <input type="hidden" value="<%= data[i].category_id %>" name="id">
+                    </div>
+                       <div class="breakfast_des">
+                        <input type="hidden" value="<%= data[i].description %>" name="description">
+
+                           <%= data[i].description %>
+                       </div>
+                       <div class="orderbtn">
+                           <div class="price">
+                        <input type="hidden" value="<%= data[i].price %>" name="price">
+
+                               <h3>$<%= data[i].price %></h3>
+                           </div>
+                           <input type="submit" value="ORDER">
+
+                           <!-- <Button><a>ORDER</a></Button> -->
+                       </div>
+                   </div>
+                   </div> 
+                </form>
+              <% } %>
+           <% } %>      
+       <% }else{ %>
+           <div>
+               <h3>No Data Found</h3>
+           </div>
+        <% } %>   
+    
+    </div>
+</div>                       
+</section>

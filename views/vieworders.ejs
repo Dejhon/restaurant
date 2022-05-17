@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <link rel="stylesheet" href="/css/vieworders.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/auth/adminlogout">Logout</a></li>
+        </ul>
+    </nav>
+    
+    <h1><%= title%></h1>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Order</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Order Number</th>
+                <th>Total</th>
+                <th>Confirm Order</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(function(orders){ %>
+          <tr>
+            <td> <%= orders.user_nm%></td>
+            <td> <%= orders.order%></td>
+            <td> <%= orders.quantity%></td>
+            <td> <%= orders.price%></td>
+            <td> <%= orders.order_num%></td>
+            <td> <%= orders.total%></td>
+            <td> <%= orders.order_confirm%></td>
+            <td class="btn"><button><a href="/admin/editOrder/<%= orders.id %>">Edit</a></button></td>
+          </tr>
+         <% }); %>    
+        </tbody>
+        <!-- <tfoot>
+            <td></td>
+        </tfoot> -->
+    </table>
+</body>
+</html>

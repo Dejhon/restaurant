@@ -1,0 +1,11 @@
+1. Create Project Folder
+2. CD into project folder
+3. npm init -y
+   npm i --s express body-parser
+   npm i --s ejs
+   //npx express --view=ejs
+   npm i --s express-flash
+   npm i --s express-validator
+   npm i --s express-session
+   npm i --s mysql
+   npm i -g nodemon

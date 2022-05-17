@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/adduser.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="return">
+        <button> <a href="/"><i class="fa fa-angle-double-left"></i> RETURN </a></button>
+    </div>
+
+      <form action="/adduser/adduser" method="post" autocomplete="off">
+          <h1><%= title  %></h1>
+          <div class="container">
+              <div class="name">
+                  <div class="f_nm">
+                      <label>First Name:</label>
+                    <input type="text" placeholder="First Name" name="first_nm" required>
+                  </div>
+                  <div class="l_nm">
+                      <label>Last Name:</label>
+                    <input type="text" placeholder="last Name" name="last_nm" required>
+                  </div>
+              </div>
+               
+              <div class="user">
+                <div class="email">
+                    <label>Email Address:</label>
+                    <input type="email" placeholder="Email Address" name="email" required>
+                </div> 
+                <div class="Uname">
+                    <label>Username:</label>
+                  <input type="text" placeholder="Username" name="user_nm" required>
+                </div> 
+              </div>     
+
+              <div class="pass">
+                  <label>Password:</label>
+                  <input type="password" name="password" placeholder="Password" required>
+              </div>
+
+              <label class="cd">Credit Card:</label>
+              <div class="card">
+                <input type="text" name="card" placeholder="xxxx-xxxx-xxxx-xxxx" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" required>
+              </div>
+
+              <div class="route">
+                  <small><a href="/user/login"><u>Login Instead?</u></a></small>
+              </div>
+              <div class="submit">
+                  <input type="submit" value="REGISTER">
+              </div>
+          </div>
+      </form>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+body{
+    background-image: url("/video/pexels-snapwire-6971.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.return{
+    margin-left: 20px;
+    margin-top: 20px;
+    border: 1px solid white;
+    width: 135px;
+}
+
+.return button{
+    background-color: transparent;
+    border:none;
+    color: white;
+    font-size: 24px;
+    outline: none;
+    margin-left: 5px;
+}
+
+.return button:focus{
+    outline: none;
+}
+
+.return button a{
+    text-decoration: none;
+    color: white;
+}
+.return button i{
+    font-size:26px;
+    margin-top:-10px;
+}
+
+form{
+    background-color:burlywood;
+    opacity: 90%;
+    margin: auto;
+    width: 500px;
+    border: 1px solid wheat;
+    border-radius: 8px;
+    margin-top: 50px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    text-align: center;
+    box-shadow: 11px 15px 19px 4px rgba(0,0,0,0.88);
+    -webkit-box-shadow: 11px 15px 19px 4px rgba(0,0,0,0.88);
+    -moz-box-shadow: 11px 15px 19px 4px rgba(0,0,0,0.88);
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    gap:18px;
+    flex-direction: column;
+}
+
+.name, .address,.user{
+    display: flex;
+    gap: 20px;
+}
+
+.pass input,.dob input,.card input{
+    width: 440px;
+}
+
+input{
+    height: 30px;
+    width: 210px;
+    border:1px solid gray;
+    border-radius: 5px;
+    outline: none;
+}
+
+select{
+    height: 30px;
+    width: 440px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+label{
+    float: left;
+    margin-left:3px;
+}
+
+.cd{
+    margin-bottom: -10px;
+    margin-left: -350px;
+}
+
+.card{
+    width: 440px;
+    background-color: transparent;
+    border: none;
+}
+
+.route{
+    margin-left: -350px;
+}
+
+.route small a {
+    color: brown;
+}
+
+.submit input{
+    background-color: brown;
+    color: white;       
+    border: 1px solid brown;  
+    text-align: center;   
+    width: 120px;
+    height: 35px;
+    letter-spacing: 2px;
+}
